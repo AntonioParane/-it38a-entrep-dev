@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>ECOLIFE</h1>
+        <h1>PROPTRACK</h1>
         <div class="form-container">
             <form action="signup.php" method="POST">
                 <h2>Login</h2>
