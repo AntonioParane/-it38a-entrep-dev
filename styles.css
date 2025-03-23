@@ -8,71 +8,50 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full screen height */
+    height: 100vh; /* Full-screen height */
 }
 
 /* Main Container */
 .container {
-    width: 90%;
-    max-width: 900px; /* Wider form for landscape */
-    display: flex;
-    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Adjust form width */
 }
 
-/* Logo Styling (Top Left Position) */
+/* Logo Styling */
 .logo-container {
-    position: absolute;
-    top: 20px;
-    left: 20px;
+    margin-bottom: 20px;
 }
 
 .logo {
-    max-width: 120px; /* Logo size */
+    max-width: 150px; /* Logo size */
     height: auto;
 }
 
 /* Form Container */
 .form-container {
     background: #ffffff;
-    padding: 40px;
+    padding: 30px;
     border-radius: 16px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    text-align: center;
 }
 
-/* Form Title */
-h2 {
-    color: #333;
-    margin-bottom: 30px;
-}
-
-/* Form Grid for Landscape Layout */
-.form-grid {
-    display: flex;
-    justify-content: space-between; /* Two columns */
-    gap: 40px; /* Space between columns */
-}
-
-/* Each Form Column */
-.form-column {
-    flex: 1; /* Equal width */
-}
-
-/* Input Container (Label and Input Field) */
+/* Input Container (for Username & Password) */
 .input-container {
+    display: flex;
+    flex-direction: column;
     text-align: left;
     margin-bottom: 20px;
 }
 
 label {
-    display: block;
-    margin-bottom: 8px;
     font-size: 14px;
     color: #4E6082; /* Label color */
+    margin-bottom: 5px;
 }
 
 /* Input Fields */
-input[type="text"] {
+input {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -81,33 +60,29 @@ input[type="text"] {
     outline: none;
 }
 
-/* Checkbox Container (Terms and Conditions) */
-.terms-container {
-    display: flex;
-    align-items: center;
-    margin: 20px 0;
-    font-size: 14px;
-    color: #4E6082;
-    justify-content: left;
+/* Password Container with Forgot Password */
+.password-container {
+    position: relative;
 }
 
-.terms-container input {
-    margin-right: 10px;
-}
-
-.terms-container a {
+/* Forgot Password Link (left-aligned) */
+.forgot-password {
+    position: absolute;
+    left: 0;
+    bottom: -20px; /* Move below the password field */
+    color: #8C8C8C;
     text-decoration: none;
-    color: #4E6082;
+    font-size: 14px;
 }
 
-.terms-container a:hover {
+.forgot-password:hover {
     text-decoration: underline;
 }
 
-/* Submit Button */
+/* Button Styling */
 button {
     width: 50%;
-    padding: 12px;
+    padding: 8px;
     margin-top: 20px;
     background: #4E6082;
     color: white;
@@ -121,27 +96,16 @@ button:hover {
     background: #8C8C8C; /* Hover effect */
 }
 
-/* Login Redirect Link */
-p {
+/* Sign-up Link */
+.form-links {
     margin-top: 20px;
 }
 
-p a {
+.form-links a {
     text-decoration: none;
-    color: #4E6082;
+    color: #8C8C8C; /* Link color */
 }
 
-p a:hover {
+.form-links a:hover {
     text-decoration: underline;
-}
-
-/* Responsive Design: Stack Columns on Smaller Screens */
-@media (max-width: 768px) {
-    .form-grid {
-        flex-direction: column; /* Stack vertically on small screens */
-    }
-
-    .container {
-        max-width: 100%; /* Full width on small screens */
-    }
 }
