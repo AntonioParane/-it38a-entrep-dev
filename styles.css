@@ -1,55 +1,111 @@
+/* Reset and Body Styling */
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #2E7D32, #A5D6A7);
-    color: white;
-    text-align: center;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full-screen height */
 }
 
+/* Main Container */
 .container {
+    text-align: center;
     width: 100%;
-    max-width: 400px;
-    margin: 50px auto;
-    background: #4CAF50;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px; /* Adjust form width */
 }
 
-h1 {
-    font-size: 32px;
-    font-weight: bold;
+/* Logo Styling */
+.logo-container {
+    margin-bottom: 20px;
 }
 
+.logo {
+    max-width: 150px; /* Logo size */
+    height: auto;
+}
+
+/* Form Container */
 .form-container {
-    margin-top: 20px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-form input {
+/* Input Container (for Username & Password) */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 14px;
+    color: #4E6082; /* Label color */
+    margin-bottom: 5px;
+}
+
+/* Input Fields */
+input {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    outline: none;
 }
 
+/* Password Container with Forgot Password */
+.password-container {
+    position: relative;
+}
+
+/* Forgot Password Link (left-aligned) */
+.forgot-password {
+    position: absolute;
+    left: 0;
+    bottom: -20px; /* Move below the password field */
+    color: #8C8C8C;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Button Styling */
 button {
-    width: 100%;
-    padding: 10px;
-    background: #1B5E20;
-    border: none;
+    width: 50%;
+    padding: 8px;
+    margin-top: 20px;
+    background: #4E6082;
     color: white;
-    font-size: 18px;
-    border-radius: 5px;
+    border: none;
+    border-radius: 24px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 button:hover {
-    background: #2E7D32;
+    background: #8C8C8C; /* Hover effect */
 }
 
-p a {
-    color: yellow;
+/* Sign-up Link */
+.form-links {
+    margin-top: 20px;
+}
+
+.form-links a {
     text-decoration: none;
+    color: #8C8C8C; /* Link color */
+}
+
+.form-links a:hover {
+    text-decoration: underline;
 }
